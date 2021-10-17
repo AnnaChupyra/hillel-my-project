@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+.visually-hiden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0000);
+    overflow: hidden;
+}
+body {
+    font-family: 'tt norms', Arial, sans-serif;
+    font-style: normal;
+    min-width: 375px;
+}
+.a {
+    &:hover {
+        color: $hover_active;
+    }
+}
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    min-width: 375px;
+    max-width: 767px;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 1320px;
+        min-width: 991px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .container_tablet {
+        min-width: 768px;
+        max-width: 991px;
+        padding: 0 40px;
+    }
+}

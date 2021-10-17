@@ -1,0 +1,35 @@
+.our-partners-gallery {
+    margin-top: 86px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+.our-partners-gallery__caption {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $main;
+    padding-bottom: 30px;
+}
+.our-partners-gallery__brands {
+    max-width: 375px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    line-height: 0;
+}
+
+@media (min-width: 992px) {
+    .our-partners-gallery {
+        margin-top: 95px;
+    }
+    .our-partners-gallery__brands {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        max-width: 1320px;
+    }
+}

@@ -1,0 +1,290 @@
+.header {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    height: 148px;
+}
+.header-box-lang-phone {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-lang__btn {
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 8px;
+    padding: 5px;
+}
+.header-lang__btn:hover {
+    background-color: $accent;
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+.header-adress {
+    font-weight: regular;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+    text-align: right;
+    display: none;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.header__separator {
+    display: none;
+}
+.header-facebook {
+    display: none;
+    width: 24px;
+    height: 24px;
+}
+.header-facebook_item:hover {
+    fill: $active;
+    transition: 0.2s ease;
+}
+.header-tel__item {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 19px;
+    color: $text;
+}
+.header-tel__item:hover {
+    color: $accent;
+    transition: 0.2s ease;
+}
+.header__logo {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    display: flex;
+    align-items: flex-start;
+}
+.header__logo-link {
+    background-image: url(../img/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 78px;
+    height: 31px;
+    display: block;
+    margin-right: 5px;
+}
+.header__bread-crumbs {
+    display: none;
+    align-items: center;
+}
+.header__bread-crumbs-item {
+    font-weight: regular;
+    font-size: 38px;
+    line-height: 45px;
+    color: #fff;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.header-menu {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    justify-self: end;
+}
+.header-burger-menu {
+    position: relative;
+    display: block;
+}
+.header-burger-menu__toggle {
+    display: none;
+}
+.header-burger-menu-icon {
+    padding-top: 8px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    z-index: 101;
+}
+.header-burger-menu-button__line {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    right: 6px;
+    display: block;
+    transition: 0.2s all;
+}
+.second {
+    transform: translateY(+7px);
+}
+.third {
+    transform: translateY(+14px);
+}
+.header-burger-menu-nav {
+    display: block;
+    position: absolute;
+    width: 200px;
+    right: 0;
+    max-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    bottom: 0;
+    transform: translateY(85%);
+    transition: 0.2s all;
+    z-index: 100;
+}
+.header-burger-menu-nav__item-p {
+    display: block;
+    margin: 0 auto;
+    padding-top: 8px;
+}
+.header-burger-menu-nav__item {
+    display: block;
+    width: 100%;
+    color: $active;
+    margin: 13px auto;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-decoration: none;
+}
+.header-burger-menu-nav__item:hover {
+    color: $accent;
+    transition: 0.2s ease;
+}
+.header-burger-menu__toggle:checked ~ .header-burger-menu-nav {
+    max-height: 275px;
+    font-size: 24px;
+    background-color: rgba(50, 50, 100, 0.9);
+    border-radius: 5px 5px 12px 12px;
+}
+.header-burger-menu__toggle:checked ~ .header-burger-menu-icon .first {
+    transform: rotate(45deg);
+    background-color: $accent;
+}
+.header-burger-menu__toggle:checked ~ .header-burger-menu-icon .third {
+    transform: rotate(-45deg);
+    background-color: $accent;
+}
+.header-burger-menu__toggle:checked ~ .header-burger-menu-icon .second {
+    display: none;
+}
+.header-menu-main {
+    display: none;
+}
+.header-menu-main-item {
+    font-weight: medium;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 16px;
+}
+.header-menu-main-item:hover {
+    color: $accent;
+    transition: 0.2s ease;
+}
+.header-menu-main-item:active {
+    color: $accent;
+    text-decoration: underline;
+    transition: 0.8s ease;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .header-menu {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        justify-self: start;
+    }
+    .header {
+        align-items: center;
+    }
+    .header-box-lang-phone {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        justify-content: flex-start;
+    }
+    .header__logo {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+    .header-burger-menu {
+        display: none;
+    }
+    .header__logo-link {
+        width: 155px;
+        height: 62px;
+    }
+    .header-adress {
+        display: block;
+    }
+    .header-facebook {
+        display: block;
+    }
+    .header-tel__item {
+        color: #fff;
+    }
+    .header-menu-main {
+        display: flex;
+    }
+    .header-tel {
+        margin-right: 25px;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-box-lang-phone {
+        grid-row-start: 1;
+        grid-column-start: 2;
+        justify-content: flex-end;
+    }
+    .header__logo {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .header-adress {
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .header-burger-menu {
+        display: none;
+    }
+    .header-menu-main {
+        display: flex;
+    }
+    .header {
+        align-items: start;
+    }
+    .header-menu-main-item {
+        margin-left: 16px;
+        margin-right: 0;
+    }
+    .header__logo-link {
+        width: 155px;
+        height: 62px;
+    }
+    .header-facebook {
+        display: block;
+        margin-left: 10px;
+    }
+    .header__separator {
+        display: block;
+    }
+    .header-tel {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .header-lang {
+        margin-right: 10px;
+    }
+}

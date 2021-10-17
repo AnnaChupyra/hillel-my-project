@@ -1,0 +1,36 @@
+.service-page-header-consultation {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.service-page-header-consultation__icon {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.service-page-header-consultation__heading {
+    font-size: 32px;
+    line-height: 38px;
+    color: $accent;
+    padding-bottom: 20px;
+    max-width: 860px;
+}
+.service-page-header-consultation__text {
+    font-size: 18px;
+    line-height: 26px;
+    color: #fff;
+    padding-bottom: 30px;
+    max-width: 860px;
+}
+.button_service {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    align-self: center;
+}
+
+@media (min-width: 992px) {
+    .service-page-header-consultation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

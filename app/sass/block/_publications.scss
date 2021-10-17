@@ -1,0 +1,110 @@
+.publications {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $bg;
+}
+.publications-box__link {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $active;
+}
+.publications-box__link:hover {
+    color: $accent;
+    transition: 0.2s ease;
+}
+.publications-box__link:hover .publications-box__link-icon {
+    stroke: $accent;
+}
+.publications__caption {
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 25px;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    color: $accent;
+}
+.publications__item {
+    margin-bottom: 30px;
+    width: 335px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.publications__item-pad {
+    padding: 20px;
+}
+.publications__item-link {
+    padding-bottom: 10px;
+    font-weight: medium;
+    font-size: 18px;
+    line-height: 21px;
+    color: $active;
+    text-decoration: none;
+}
+.publications__item-link:hover {
+    color: $accent;
+    transition: 0.2s ease;
+}
+.publications__item-text {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $text;
+    padding-top: 10px;
+}
+.publications__item-box {
+    border-top: 4px solid $separator;
+    display: none;
+}
+.publications__item-box-text {
+    font-weight: regular;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+    padding-top: 20px;
+}
+.desktop-blok {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .publications__item {
+        width: 414px;
+    }
+    .publications__item-pad {
+        width: 414px;
+    }
+    .publications__item-text {
+        padding-bottom: 20px;
+    }
+    .publications__item-box {
+        display: block;
+    }
+    .desktop-blok {
+        display: block;
+    }
+    .publications-articles-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 40px;
+        row-gap: 40px;
+        padding-bottom: 55px;
+    }
+    .publications__item-foto {
+        width: 100%;
+    }
+    .publications {
+        padding-bottom: 55px;
+    }
+}

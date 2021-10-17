@@ -1,0 +1,15 @@
+.service-page-header-bg {
+    background-color: $main;
+    position: relative;
+    z-index: -2;
+}
+.service-page-header-bg::after {
+    content: url(../img/service-page-bg.jpg);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 252px;
+    position: absolute;
+    mask-image: linear-gradient(360deg, rgba(50, 50, 100, 0.1) 0%, #323264 100%), url(241305.jpg);
+    mask-repeat: no-repeat;
+    z-index: -1;
+}
